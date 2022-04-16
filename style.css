@@ -25,6 +25,16 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* --------------- DARK THEME VARAIBLES ---------------- */
+.dark-theme-variables{
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +47,7 @@
 }
 
 html {
-  t-size: 14px;
+  font-size: 14px;
 }
 
 body {
@@ -56,11 +66,19 @@ body {
   width: 96%;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 
+  minmax(14rem, 16rem)
+  auto 
+  minmax(20rem, 30rem);
 }
 
 a {
   color: var--color-dark;
+  width: 100%;
+}
+
+img {
+  display: block;
   width: 100%;
 }
 
@@ -87,11 +105,6 @@ h5 {
 
 small {
   font-size: 0.75rem;
-}
-
-img {
-  max-width: 100%;
-  max-height: auto;
 }
 
 .profile-photo {
@@ -244,8 +257,12 @@ main .date input[type="date"] {
 
 main .insights {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
+  grid-template-columns:
+    minmax(14.5rem, auto)
+    minmax(14.5rem, auto)
+    minmax(14.5rem, auto);
+  /*  grid-template-columns: repeat(3, 1fr); */
+    gap: 1rem;
 }
 
 main .insights > div {
@@ -530,7 +547,7 @@ main .recent-orders a {
 @media screen and (max-width: 1200px) {
   .container {
     width: 94%;
-    grid-template-columns: 7rem auto 23rem;
+    grid-template-columns: 7rem auto 20rem;
   }
 
   aside .logo h2 {
@@ -564,7 +581,8 @@ main .recent-orders a {
   }
 
   main .recent-orders table {
-    width: 83vw;
+   width: 78vw; 
+   /* width: 83vw;   */
   }
 
   main table thead tr th:last-child,
@@ -587,7 +605,7 @@ main .recent-orders a {
 
   aside {
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -595,7 +613,14 @@ main .recent-orders a {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
   }
+
+  @keyframes showMenu {
+    to {
+        left: 0;
+    }
+}
 
   aside .logo {
     margin-left: 1rem;
