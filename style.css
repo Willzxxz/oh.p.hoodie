@@ -31,7 +31,7 @@
   --color-white: #202528;
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
-  --color-light: rgba(0, 0, 0, 0.4);
+  --color-light: rgba(0, 0, 0, 0.4)
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
@@ -68,7 +68,7 @@ body {
   gap: 1.8rem;
   grid-template-columns: 
   minmax(14rem, 16rem)
-  auto 
+  auto
   minmax(20rem, 30rem);
 }
 
@@ -144,6 +144,7 @@ b {
 
 aside {
   height: 100vh;
+  display: block;
 }
 
 aside .top {
@@ -544,10 +545,18 @@ main .recent-orders a {
 }
 
 /* -------------MEDIA QUERIES ----------------*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px){
   .container {
     width: 94%;
     grid-template-columns: 7rem auto 20rem;
+  }
+
+  aside {
+    left: 0;
+  }
+
+  aside .style {
+    display: block;
   }
 
   aside .logo h2 {

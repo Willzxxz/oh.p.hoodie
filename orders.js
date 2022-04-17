@@ -1,6 +1,6 @@
 const Orders = [
     {
-        productName: 'iphone x',
+        productName: 'Iphone',
         productNumber: '85631',
         paymentStatus: 'Due',
         shipping: 'Pending'
