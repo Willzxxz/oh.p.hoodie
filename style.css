@@ -420,8 +420,8 @@ main .recent-orders a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 1.6rem;
-  width: 4.2rem;
+  height: 2rem;
+  width: 7rem;
   cursor: pointer;
   border-radius: var(--border-radius-1);
 }

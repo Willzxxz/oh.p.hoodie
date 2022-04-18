@@ -35,7 +35,7 @@ mediaQueryList.addListener(screenTest);
 
     
 
-//change theme
+//change theme 
 themeToggler.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme-variables");
 
